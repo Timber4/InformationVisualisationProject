@@ -404,7 +404,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-roken">Dataset 3: Roken</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtreren">Filtreren</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combineren">Combineren</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normaliseren">Normaliseren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#per-duizend-inwoners">Per duizend inwoners</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opslaan">Opslaan</a></li>
 </ul>
             </nav>
@@ -917,16 +917,16 @@ document.write(`
 </div></div></div>
 </div>
 </section>
-<section id="normaliseren">
-<h2>Normaliseren<a class="headerlink" href="#normaliseren" title="Link to this heading">#</a></h2>
+<section id="per-duizend-inwoners">
+<h2>Per duizend inwoners<a class="headerlink" href="#per-duizend-inwoners" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Nitrogen oxide (NOx)&#39;</span><span class="p">,</span> <span class="s1">&#39;Sulphur dioxide (SO₂) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Carbon monoxide (CO) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Organic carbon (OC) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Non-methane volatile organic compounds (NMVOC) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Black carbon (BC) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Ammonia (NH₃) emissions&#39;</span><span class="p">]</span>
 <span class="n">df_norm</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="n">df_countries_year</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="n">df_combined</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">])</span>
-<span class="c1"># df_norm = df_norm[df_norm[&#39;TBL rate&#39;].notna()]</span>
-<span class="c1"># df_norm = df_norm[df_norm[&#39;Percentage daily smokers&#39;].notna()]</span>
+<span class="n">df_norm</span> <span class="o">=</span> <span class="n">df_norm</span><span class="p">[</span><span class="n">df_norm</span><span class="p">[</span><span class="s1">&#39;TBL rate&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span>
+<span class="n">df_norm</span> <span class="o">=</span> <span class="n">df_norm</span><span class="p">[</span><span class="n">df_norm</span><span class="p">[</span><span class="s1">&#39;Percentage daily smokers&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span>
 <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">:</span>
-    <span class="n">df_norm</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_norm</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">/</span><span class="n">df_norm</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">])</span>
+    <span class="n">df_norm</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_norm</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">/</span><span class="n">df_norm</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">])</span> <span class="o">*</span> <span class="mi">1000</span>
 <span class="n">df_norm</span> <span class="o">=</span> <span class="n">df_norm</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span> <span class="s1">&#39;Surface area&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">df_norm</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
@@ -969,13 +969,13 @@ document.write(`
       <th>0</th>
       <td>AFG</td>
       <td>1990</td>
-      <td>0.034252</td>
-      <td>0.001037</td>
-      <td>0.081647</td>
-      <td>0.002264</td>
-      <td>0.032618</td>
-      <td>0.000674</td>
-      <td>0.005903</td>
+      <td>34.251869</td>
+      <td>1.037435</td>
+      <td>81.647260</td>
+      <td>2.264382</td>
+      <td>32.618140</td>
+      <td>0.673735</td>
+      <td>5.903362</td>
       <td>10.8</td>
       <td>14.069657</td>
     </tr>
@@ -983,13 +983,13 @@ document.write(`
       <th>1</th>
       <td>AFG</td>
       <td>1991</td>
-      <td>0.031081</td>
-      <td>0.000953</td>
-      <td>0.073972</td>
-      <td>0.002166</td>
-      <td>0.028699</td>
-      <td>0.000639</td>
-      <td>0.005831</td>
+      <td>31.081224</td>
+      <td>0.952851</td>
+      <td>73.971788</td>
+      <td>2.165868</td>
+      <td>28.698829</td>
+      <td>0.638703</td>
+      <td>5.831061</td>
       <td>10.9</td>
       <td>13.805590</td>
     </tr>
@@ -997,13 +997,13 @@ document.write(`
       <th>2</th>
       <td>AFG</td>
       <td>1992</td>
-      <td>0.018830</td>
-      <td>0.000534</td>
-      <td>0.045217</td>
-      <td>0.002049</td>
-      <td>0.016729</td>
-      <td>0.000586</td>
-      <td>0.005731</td>
+      <td>18.829604</td>
+      <td>0.533831</td>
+      <td>45.216586</td>
+      <td>2.049287</td>
+      <td>16.729431</td>
+      <td>0.585962</td>
+      <td>5.731069</td>
       <td>11.0</td>
       <td>13.591141</td>
     </tr>
@@ -1011,13 +1011,13 @@ document.write(`
       <th>3</th>
       <td>AFG</td>
       <td>1993</td>
-      <td>0.017493</td>
-      <td>0.000504</td>
-      <td>0.041902</td>
-      <td>0.001949</td>
-      <td>0.015181</td>
-      <td>0.000554</td>
-      <td>0.005657</td>
+      <td>17.492720</td>
+      <td>0.503715</td>
+      <td>41.902354</td>
+      <td>1.948891</td>
+      <td>15.180614</td>
+      <td>0.553596</td>
+      <td>5.656682</td>
       <td>11.1</td>
       <td>13.422799</td>
     </tr>
@@ -1025,13 +1025,13 @@ document.write(`
       <th>4</th>
       <td>AFG</td>
       <td>1994</td>
-      <td>0.014806</td>
-      <td>0.000451</td>
-      <td>0.038495</td>
-      <td>0.001878</td>
-      <td>0.013726</td>
-      <td>0.000530</td>
-      <td>0.005604</td>
+      <td>14.805869</td>
+      <td>0.450874</td>
+      <td>38.495169</td>
+      <td>1.878129</td>
+      <td>13.726107</td>
+      <td>0.530310</td>
+      <td>5.604167</td>
       <td>11.2</td>
       <td>13.250556</td>
     </tr>
@@ -1287,7 +1287,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-roken">Dataset 3: Roken</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtreren">Filtreren</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combineren">Combineren</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normaliseren">Normaliseren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#per-duizend-inwoners">Per duizend inwoners</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opslaan">Opslaan</a></li>
 </ul>
   </nav></div>

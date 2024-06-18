@@ -402,6 +402,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-kanker">Dataset 1: Kanker</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-luchtvervuiling">Dataset 2: Luchtvervuiling</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-roken">Dataset 3: Roken</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-4-world-statistieken">Dataset 4: World statistieken</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtreren">Filtreren</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combineren">Combineren</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#per-duizend-inwoners">Per duizend inwoners</a></li>
@@ -699,12 +700,22 @@ document.write(`
 </table>
 </div></div></div>
 </div>
+</section>
+<section id="dataset-4-world-statistieken">
+<h2>Dataset 4: World statistieken<a class="headerlink" href="#dataset-4-world-statistieken" title="Link to this heading">#</a></h2>
+<p>We gebruiken deze dataset om de uitstoot gegevens naar een getal te berekenen die makkelijker te visualiseren zijn. De dataset bevat allerlei statistieken van elk land, maar wij gebruiken alleen de populatie variabel.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_countries</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;datasets/countries.csv&#39;</span><span class="p">)</span>
-<span class="n">df_countries</span> <span class="o">=</span> <span class="n">df_countries</span><span class="p">[[</span><span class="s1">&#39;Country Code&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;Population, total&#39;</span><span class="p">,</span> <span class="s1">&#39;Surface area (sq. km)&#39;</span><span class="p">]]</span>
-<span class="n">df_countries</span> <span class="o">=</span> <span class="n">df_countries</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Country Code&#39;</span><span class="p">:</span> <span class="s1">&#39;Code&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">:</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Population, total&#39;</span><span class="p">:</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span> <span class="s1">&#39;Surface area (sq. km)&#39;</span><span class="p">:</span><span class="s1">&#39;Surface area&#39;</span><span class="p">})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># https://www.kaggle.com/datasets/mutindafestus/world-statistics-dataset-from-world-bank</span>
+<span class="c1"># Load data</span>
+<span class="n">df_countries</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;datasets/countries.csv&#39;</span><span class="p">)</span>
+<span class="c1"># Select columns</span>
+<span class="n">df_countries</span> <span class="o">=</span> <span class="n">df_countries</span><span class="p">[[</span><span class="s1">&#39;Country Code&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;Population, total&#39;</span><span class="p">]]</span>
+<span class="c1"># Rename columns</span>
+<span class="n">df_countries</span> <span class="o">=</span> <span class="n">df_countries</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Country Code&#39;</span><span class="p">:</span> <span class="s1">&#39;Code&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">:</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Population, total&#39;</span><span class="p">:</span><span class="s1">&#39;Population&#39;</span><span class="p">})</span>
+<span class="c1"># Delete non-country entries</span>
 <span class="n">df_countries</span> <span class="o">=</span> <span class="n">df_countries</span><span class="p">[</span><span class="n">df_countries</span><span class="p">[</span><span class="s1">&#39;Code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span>
+<span class="c1"># Display dataframe</span>
 <span class="n">df_countries</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -731,7 +742,6 @@ document.write(`
       <th>Code</th>
       <th>Year</th>
       <th>Population</th>
-      <th>Surface area</th>
     </tr>
   </thead>
   <tbody>
@@ -740,35 +750,30 @@ document.write(`
       <td>AFG</td>
       <td>1960</td>
       <td>8996973.0</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <th>1</th>
       <td>AFG</td>
       <td>1961</td>
       <td>9169410.0</td>
-      <td>652860.0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>AFG</td>
       <td>1962</td>
       <td>9351441.0</td>
-      <td>652860.0</td>
     </tr>
     <tr>
       <th>3</th>
       <td>AFG</td>
       <td>1963</td>
       <td>9543205.0</td>
-      <td>652860.0</td>
     </tr>
     <tr>
       <th>4</th>
       <td>AFG</td>
       <td>1964</td>
       <td>9744781.0</td>
-      <td>652860.0</td>
     </tr>
   </tbody>
 </table>
@@ -919,15 +924,22 @@ document.write(`
 </section>
 <section id="per-duizend-inwoners">
 <h2>Per duizend inwoners<a class="headerlink" href="#per-duizend-inwoners" title="Link to this heading">#</a></h2>
+<p>Voor sommige grafieken willen we in plaats van de totale uitstoot de uitstoot per capita hebben. Om deze date te krijgen delen we elke uitstoot door de totale populatie van het land waar het is gemeten. We vermenigvuldigen de uitkomst met 1000 om de getallen makkelijker te kunnen gebruiken.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Nitrogen oxide (NOx)&#39;</span><span class="p">,</span> <span class="s1">&#39;Sulphur dioxide (SO₂) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Carbon monoxide (CO) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Organic carbon (OC) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Non-methane volatile organic compounds (NMVOC) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Black carbon (BC) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Ammonia (NH₃) emissions&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select columns to be divided by population</span>
+<span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Nitrogen oxide (NOx)&#39;</span><span class="p">,</span> <span class="s1">&#39;Sulphur dioxide (SO₂) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Carbon monoxide (CO) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Organic carbon (OC) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Non-methane volatile organic compounds (NMVOC) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Black carbon (BC) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Ammonia (NH₃) emissions&#39;</span><span class="p">]</span>
+<span class="c1"># Combine the population statistics to the dataframe</span>
 <span class="n">df_norm</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="n">df_countries_year</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="n">df_combined</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">])</span>
+<span class="c1"># Remove invalid data</span>
 <span class="n">df_norm</span> <span class="o">=</span> <span class="n">df_norm</span><span class="p">[</span><span class="n">df_norm</span><span class="p">[</span><span class="s1">&#39;TBL rate&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span>
 <span class="n">df_norm</span> <span class="o">=</span> <span class="n">df_norm</span><span class="p">[</span><span class="n">df_norm</span><span class="p">[</span><span class="s1">&#39;Percentage daily smokers&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span>
+<span class="c1"># Divide by population and multiply it by 1000</span>
 <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">:</span>
     <span class="n">df_norm</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_norm</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">/</span><span class="n">df_norm</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">])</span> <span class="o">*</span> <span class="mi">1000</span>
-<span class="n">df_norm</span> <span class="o">=</span> <span class="n">df_norm</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span> <span class="s1">&#39;Surface area&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># Remove the population column</span>
+<span class="n">df_norm</span> <span class="o">=</span> <span class="n">df_norm</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># Display data</span>
 <span class="n">df_norm</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1052,178 +1064,6 @@ document.write(`
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_norm</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Nitrogen oxide (NOx)</th>
-      <th>Sulphur dioxide (SO₂) emissions</th>
-      <th>Carbon monoxide (CO) emissions</th>
-      <th>Organic carbon (OC) emissions</th>
-      <th>Non-methane volatile organic compounds (NMVOC) emissions</th>
-      <th>Black carbon (BC) emissions</th>
-      <th>Ammonia (NH₃) emissions</th>
-      <th>Percentage daily smokers</th>
-      <th>TBL rate</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Year</th>
-      <td>1.000000</td>
-      <td>-0.038595</td>
-      <td>-0.104656</td>
-      <td>-0.127479</td>
-      <td>-0.043288</td>
-      <td>-0.055879</td>
-      <td>-0.036491</td>
-      <td>-0.022930</td>
-      <td>-0.113890</td>
-      <td>-0.033405</td>
-    </tr>
-    <tr>
-      <th>Nitrogen oxide (NOx)</th>
-      <td>-0.038595</td>
-      <td>1.000000</td>
-      <td>0.557357</td>
-      <td>0.432135</td>
-      <td>-0.228779</td>
-      <td>0.514666</td>
-      <td>0.264043</td>
-      <td>0.189436</td>
-      <td>0.194805</td>
-      <td>0.393946</td>
-    </tr>
-    <tr>
-      <th>Sulphur dioxide (SO₂) emissions</th>
-      <td>-0.104656</td>
-      <td>0.557357</td>
-      <td>1.000000</td>
-      <td>0.168785</td>
-      <td>-0.158816</td>
-      <td>0.561966</td>
-      <td>0.239897</td>
-      <td>-0.001822</td>
-      <td>0.198109</td>
-      <td>0.254374</td>
-    </tr>
-    <tr>
-      <th>Carbon monoxide (CO) emissions</th>
-      <td>-0.127479</td>
-      <td>0.432135</td>
-      <td>0.168785</td>
-      <td>1.000000</td>
-      <td>0.097245</td>
-      <td>0.302241</td>
-      <td>0.216195</td>
-      <td>0.412569</td>
-      <td>0.059140</td>
-      <td>0.217940</td>
-    </tr>
-    <tr>
-      <th>Organic carbon (OC) emissions</th>
-      <td>-0.043288</td>
-      <td>-0.228779</td>
-      <td>-0.158816</td>
-      <td>0.097245</td>
-      <td>1.000000</td>
-      <td>-0.006287</td>
-      <td>0.514381</td>
-      <td>0.039748</td>
-      <td>-0.227585</td>
-      <td>-0.110677</td>
-    </tr>
-    <tr>
-      <th>Non-methane volatile organic compounds (NMVOC) emissions</th>
-      <td>-0.055879</td>
-      <td>0.514666</td>
-      <td>0.561966</td>
-      <td>0.302241</td>
-      <td>-0.006287</td>
-      <td>1.000000</td>
-      <td>0.491063</td>
-      <td>0.116205</td>
-      <td>-0.056746</td>
-      <td>0.079713</td>
-    </tr>
-    <tr>
-      <th>Black carbon (BC) emissions</th>
-      <td>-0.036491</td>
-      <td>0.264043</td>
-      <td>0.239897</td>
-      <td>0.216195</td>
-      <td>0.514381</td>
-      <td>0.491063</td>
-      <td>1.000000</td>
-      <td>0.015943</td>
-      <td>-0.136390</td>
-      <td>-0.016978</td>
-    </tr>
-    <tr>
-      <th>Ammonia (NH₃) emissions</th>
-      <td>-0.022930</td>
-      <td>0.189436</td>
-      <td>-0.001822</td>
-      <td>0.412569</td>
-      <td>0.039748</td>
-      <td>0.116205</td>
-      <td>0.015943</td>
-      <td>1.000000</td>
-      <td>0.111545</td>
-      <td>0.218620</td>
-    </tr>
-    <tr>
-      <th>Percentage daily smokers</th>
-      <td>-0.113890</td>
-      <td>0.194805</td>
-      <td>0.198109</td>
-      <td>0.059140</td>
-      <td>-0.227585</td>
-      <td>-0.056746</td>
-      <td>-0.136390</td>
-      <td>0.111545</td>
-      <td>1.000000</td>
-      <td>0.641703</td>
-    </tr>
-    <tr>
-      <th>TBL rate</th>
-      <td>-0.033405</td>
-      <td>0.393946</td>
-      <td>0.254374</td>
-      <td>0.217940</td>
-      <td>-0.110677</td>
-      <td>0.079713</td>
-      <td>-0.016978</td>
-      <td>0.218620</td>
-      <td>0.641703</td>
-      <td>1.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
 </section>
 </section>
 
@@ -1285,6 +1125,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-kanker">Dataset 1: Kanker</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-luchtvervuiling">Dataset 2: Luchtvervuiling</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-roken">Dataset 3: Roken</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-4-world-statistieken">Dataset 4: World statistieken</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtreren">Filtreren</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combineren">Combineren</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#per-duizend-inwoners">Per duizend inwoners</a></li>

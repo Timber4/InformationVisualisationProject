@@ -405,6 +405,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-roken">Dataset 3: Roken</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtreren">Filtreren</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combineren">Combineren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normaliseren">Normaliseren</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opslaan">Opslaan</a></li>
 </ul>
             </nav>
@@ -699,6 +700,81 @@ document.write(`
 </table>
 </div></div></div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_countries</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;datasets/countries.csv&#39;</span><span class="p">)</span>
+<span class="n">df_countries</span> <span class="o">=</span> <span class="n">df_countries</span><span class="p">[[</span><span class="s1">&#39;Country Code&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;Population, total&#39;</span><span class="p">,</span> <span class="s1">&#39;Surface area (sq. km)&#39;</span><span class="p">]]</span>
+<span class="n">df_countries</span> <span class="o">=</span> <span class="n">df_countries</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Country Code&#39;</span><span class="p">:</span> <span class="s1">&#39;Code&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">:</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Population, total&#39;</span><span class="p">:</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span> <span class="s1">&#39;Surface area (sq. km)&#39;</span><span class="p">:</span><span class="s1">&#39;Surface area&#39;</span><span class="p">})</span>
+<span class="n">df_countries</span> <span class="o">=</span> <span class="n">df_countries</span><span class="p">[</span><span class="n">df_countries</span><span class="p">[</span><span class="s1">&#39;Code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span>
+<span class="n">df_countries</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Code</th>
+      <th>Year</th>
+      <th>Population</th>
+      <th>Surface area</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AFG</td>
+      <td>1960</td>
+      <td>8996973.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AFG</td>
+      <td>1961</td>
+      <td>9169410.0</td>
+      <td>652860.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AFG</td>
+      <td>1962</td>
+      <td>9351441.0</td>
+      <td>652860.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>AFG</td>
+      <td>1963</td>
+      <td>9543205.0</td>
+      <td>652860.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AFG</td>
+      <td>1964</td>
+      <td>9744781.0</td>
+      <td>652860.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
 </section>
 <section id="filtreren">
 <h2>Filtreren<a class="headerlink" href="#filtreren" title="Link to this heading">#</a></h2>
@@ -711,6 +787,7 @@ document.write(`
 <span class="n">df_cancer_year</span> <span class="o">=</span> <span class="n">df_cancer_rate</span><span class="p">[</span><span class="n">df_cancer_rate</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="n">begin_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">)]</span>
 <span class="n">df_smoking_year</span> <span class="o">=</span> <span class="n">df_smoking</span><span class="p">[</span><span class="n">df_smoking</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="n">begin_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">)]</span>
 <span class="n">df_pollution_year</span> <span class="o">=</span> <span class="n">df_pollution</span><span class="p">[</span><span class="n">df_pollution</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="n">begin_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">)]</span>
+<span class="n">df_countries_year</span> <span class="o">=</span> <span class="n">df_countries</span><span class="p">[</span><span class="n">df_countries</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="n">begin_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
@@ -841,13 +918,27 @@ document.write(`
 </div></div></div>
 </div>
 </section>
+<section id="normaliseren">
+<h2>Normaliseren<a class="headerlink" href="#normaliseren" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Nitrogen oxide (NOx)&#39;</span><span class="p">,</span> <span class="s1">&#39;Sulphur dioxide (SO₂) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Carbon monoxide (CO) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Organic carbon (OC) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Non-methane volatile organic compounds (NMVOC) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Black carbon (BC) emissions&#39;</span><span class="p">,</span> <span class="s1">&#39;Ammonia (NH₃) emissions&#39;</span><span class="p">]</span>
+<span class="n">df_norm</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="n">df_countries_year</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="n">df_combined</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">:</span>
+    <span class="n">df_norm</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_norm</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">/</span><span class="n">df_norm</span><span class="p">[</span><span class="s1">&#39;Surface area&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="opslaan">
 <h2>Opslaan<a class="headerlink" href="#opslaan" title="Link to this heading">#</a></h2>
-<p>En als laatst wordt de gecombineerde dataset opgeslagen zodat het makkelijk te gebruiken is voor het onderzoek.</p>
+<p>En als laatst wordt de gecombineerde dataset opgeslagen zodat het makkelijk toegangbaar is voor het onderzoek.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save to csv</span>
 <span class="n">df_combined</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;datasets/combined.csv&#39;</span><span class="p">)</span>
+<span class="n">df_norm</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;datasets/norm.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -915,6 +1006,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-roken">Dataset 3: Roken</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtreren">Filtreren</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combineren">Combineren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normaliseren">Normaliseren</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opslaan">Opslaan</a></li>
 </ul>
   </nav></div>

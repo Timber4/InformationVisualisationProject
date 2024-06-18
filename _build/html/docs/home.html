@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Test Home Page &#8212; IV Project</title>
+    <title>Luchtvervuiling &#8212; IV Project</title>
   
   
   
@@ -169,7 +169,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Test Home Page
+                    Luchtvervuiling
                 </a>
             </li>
         </ul>
@@ -217,6 +217,37 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Timber4/InformationVisualisationProject/blob/main/docs/docs/home.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -277,7 +308,7 @@
       
       
       
-      <li><a href="../_sources/docs/home.md" target="_blank"
+      <li><a href="../_sources/docs/home.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -287,7 +318,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -348,7 +379,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -359,11 +392,32 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Test Home Page</h1>
+    <h1>Luchtvervuiling</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-and-preprocessing">Dataset and Preprocessing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perspectief-1-luchtvervuiling-moet-direct-verminderd-worden-voor-de-bescherming-van-de-gezondheid">Perspectief 1: Luchtvervuiling moet direct verminderd worden voor de bescherming van de gezondheid</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-luchtvervuiling-veroorzaakt-longkanker">Argument: Luchtvervuiling veroorzaakt longkanker</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perspectief-2-het-verminderen-van-luchtvervuiling-heeft-geen-prioriteit-omdat-het-geen-grote-impact-heeft-op-de-gezondheid">Perspectief 2: Het verminderen van luchtvervuiling heeft geen prioriteit, omdat het geen grote impact heeft op de gezondheid.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-roken-is-een-grotere-factor-in-het-krijgen-van-longkanker">Argument: Roken is een grotere factor in het krijgen van longkanker</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-luchtvervuiling-neemt-al-af">Argument: Luchtvervuiling neemt al af.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection">Reflection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#work-distribution">Work Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -373,8 +427,220 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="test-home-page">
-<h1>Test Home Page<a class="headerlink" href="#test-home-page" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="luchtvervuiling">
+<h1>Luchtvervuiling<a class="headerlink" href="#luchtvervuiling" title="Link to this heading">#</a></h1>
+<p>Studenten: Wietske Boersma, Isa van den Hoven, Alecsandru Kreefft-Libiu, Timber Rijsdorp</p>
+<p>Teamnummer: N5</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load image from link</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://cdn.nos.nl/image/2022/06/21/871362/1536x864a.jpg&#39;</span>
+
+<span class="c1"># Display image from URL with smaller size and subtitle</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
+
+<span class="c1"># Set the desired image width and height</span>
+<span class="n">width</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="n">height</span> <span class="o">=</span> <span class="mi">300</span>
+
+<span class="c1"># Set the subtitle text</span>
+<span class="n">subtitle</span> <span class="o">=</span> <span class="s2">&quot;© NOS&quot;</span>
+
+<span class="c1"># Create an Image instance with the URL</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">)</span>
+
+<span class="c1"># Display the image and subtitle</span>
+<span class="n">display</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">subtitle</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><img src="https://cdn.nos.nl/image/2022/06/21/871362/1536x864a.jpg" width="600" height="300"/></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>© NOS
+</pre></div>
+</div>
+</div>
+</div>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>//TODO</p>
+</section>
+<section id="dataset-and-preprocessing">
+<h2>Dataset and Preprocessing<a class="headerlink" href="#dataset-and-preprocessing" title="Link to this heading">#</a></h2>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+</section>
+<section id="perspectief-1-luchtvervuiling-moet-direct-verminderd-worden-voor-de-bescherming-van-de-gezondheid">
+<h2>Perspectief 1: Luchtvervuiling moet direct verminderd worden voor de bescherming van de gezondheid<a class="headerlink" href="#perspectief-1-luchtvervuiling-moet-direct-verminderd-worden-voor-de-bescherming-van-de-gezondheid" title="Link to this heading">#</a></h2>
+<p>Luchtvervuiling is een factor in de hoeveelheid mensen die longkanker krijgen.</p>
+<section id="argument-luchtvervuiling-veroorzaakt-longkanker">
+<h3>Argument: Luchtvervuiling veroorzaakt longkanker<a class="headerlink" href="#argument-luchtvervuiling-veroorzaakt-longkanker" title="Link to this heading">#</a></h3>
+<p>Luchtvervuilende stoffen zoals stikstof-oxide kan longkanker veroorzaken bij mensen die dicht in de buurt van deze vervuilende stoffen wonen.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+
+<span class="kn">from</span> <span class="nn">plotly.offline</span> <span class="kn">import</span> <span class="n">init_notebook_mode</span>
+<span class="n">init_notebook_mode</span><span class="p">(</span><span class="n">connected</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">country_codes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NLD&#39;</span><span class="p">,</span> <span class="s1">&#39;CHN&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;datasets/norm.csv&#39;</span><span class="p">)</span>
+<span class="n">df_2012</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2012</span><span class="p">]</span>
+<span class="n">df_2012_countries</span> <span class="o">=</span> <span class="n">df_2012</span><span class="p">[</span><span class="n">df_2012</span><span class="p">[</span><span class="s1">&#39;Code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">country_codes</span><span class="p">)]</span>
+
+<span class="n">countries</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;China&#39;</span><span class="p">,</span> <span class="s1">&#39;Nederland&#39;</span><span class="p">,</span> <span class="s1">&#39;Verenigde Staten&#39;</span><span class="p">]</span>
+
+<span class="n">trace</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">countries</span><span class="p">,</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">df_2012_countries</span><span class="p">[</span><span class="s1">&#39;Nitrogen oxide (NOx)&#39;</span><span class="p">],</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;NOx per 1000 inwoners&#39;</span>
+    <span class="p">),</span>
+    <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">countries</span><span class="p">,</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">df_2012_countries</span><span class="p">[</span><span class="s1">&#39;Sulphur dioxide (SO₂) emissions&#39;</span><span class="p">],</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;SO2 per 1000 inwoners&#39;</span>
+    <span class="p">),</span>
+    <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">countries</span><span class="p">,</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">df_2012_countries</span><span class="p">[</span><span class="s1">&#39;Carbon monoxide (CO) emissions&#39;</span><span class="p">],</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;CO per 1000 inwoners&#39;</span>
+    <span class="p">),</span>
+    <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">countries</span><span class="p">,</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">df_2012_countries</span><span class="p">[</span><span class="s1">&#39;Organic carbon (OC) emissions&#39;</span><span class="p">],</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;OC per 1000 inwoners&#39;</span>
+    <span class="p">),</span>
+    <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">countries</span><span class="p">,</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">df_2012_countries</span><span class="p">[</span><span class="s1">&#39;Non-methane volatile organic compounds (NMVOC) emissions&#39;</span><span class="p">],</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;NMVOC per 1000 inwoners&#39;</span>
+    <span class="p">),</span>
+    <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">countries</span><span class="p">,</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">df_2012_countries</span><span class="p">[</span><span class="s1">&#39;Black carbon (BC) emissions&#39;</span><span class="p">],</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;BC per 1000 inwoners&#39;</span>
+    <span class="p">),</span>
+    <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">countries</span><span class="p">,</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">df_2012_countries</span><span class="p">[</span><span class="s1">&#39;Ammonia (NH₃) emissions&#39;</span><span class="p">],</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;NH3 per 1000 inwoners&#39;</span>
+    <span class="p">),</span>
+    <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">countries</span><span class="p">,</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">df_2012_countries</span><span class="p">[</span><span class="s1">&#39;TBL rate&#39;</span><span class="p">],</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Longkanker leeftijd gestandardiseerd&#39;</span>
+    <span class="p">)]</span>    
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">barmode</span><span class="o">=</span><span class="s1">&#39;group&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html">        <script type="text/javascript">
+        window.PlotlyConfig = {MathJaxConfig: 'local'};
+        if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+        if (typeof require !== 'undefined') {
+        require.undef("plotly");
+        requirejs.config({
+            paths: {
+                'plotly': ['https://cdn.plot.ly/plotly-2.32.0.min']
+            }
+        });
+        require(['plotly'], function(Plotly) {
+            window._Plotly = Plotly;
+        });
+        }
+        </script>
+        </div><div class="output text_html"><div>                            <div id="c1a7be07-dfac-4a01-b6ba-2f90fbdcd03a" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("c1a7be07-dfac-4a01-b6ba-2f90fbdcd03a")) {                    Plotly.newPlot(                        "c1a7be07-dfac-4a01-b6ba-2f90fbdcd03a",                        [{"name":"NOx per 1000 inwoners","x":["China","Nederland","Verenigde Staten"],"y":[0.022737306349694,0.0177312977492876,0.0347625452795468],"type":"bar"},{"name":"SO2 per 1000 inwoners","x":["China","Nederland","Verenigde Staten"],"y":[0.0227623615990286,0.0021049219329772,0.0147475955131136],"type":"bar"},{"name":"CO per 1000 inwoners","x":["China","Nederland","Verenigde Staten"],"y":[0.1454510455728347,0.0380444252872671,0.1114383254502686],"type":"bar"},{"name":"OC per 1000 inwoners","x":["China","Nederland","Verenigde Staten"],"y":[0.0016631426783988,0.0006470308318216,0.0017456826045127],"type":"bar"},{"name":"NMVOC per 1000 inwoners","x":["China","Nederland","Verenigde Staten"],"y":[0.022256473889368,0.0143375932455113,0.035764323338495],"type":"bar"},{"name":"BC per 1000 inwoners","x":["China","Nederland","Verenigde Staten"],"y":[0.0012305507905189,0.0003215028240589,0.0005625761496657],"type":"bar"},{"name":"NH3 per 1000 inwoners","x":["China","Nederland","Verenigde Staten"],"y":[0.0092990156919215,0.0094972080509642,0.0128627975841391],"type":"bar"},{"name":"Longkanker leeftijd gestandardiseerd","x":["China","Nederland","Verenigde Staten"],"y":[39.67839555238313,41.68556873940827,38.59254893354976],"type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"barmode":"group"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('c1a7be07-dfac-4a01-b6ba-2f90fbdcd03a');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
+<blockquote>
+<div><p><em>Figure 1: Staafdiagram die de uitstoot van verschillende schadelijke stoffen laat zien en de hoeveelheid mensen die overleden zijn aan kanker.</em></p>
+</div></blockquote>
+<p>At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.</p>
+<blockquote>
+<div><p><em>Figure 2: Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</em></p>
+</div></blockquote>
+<p>Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.</p>
+</section>
+</section>
+<section id="perspectief-2-het-verminderen-van-luchtvervuiling-heeft-geen-prioriteit-omdat-het-geen-grote-impact-heeft-op-de-gezondheid">
+<h2>Perspectief 2: Het verminderen van luchtvervuiling heeft geen prioriteit, omdat het geen grote impact heeft op de gezondheid.<a class="headerlink" href="#perspectief-2-het-verminderen-van-luchtvervuiling-heeft-geen-prioriteit-omdat-het-geen-grote-impact-heeft-op-de-gezondheid" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Andere oorzaken van longkanker zijn erger</p></li>
+<li><p>Luchtvervuiling neemt al af</p></li>
+</ul>
+<section id="argument-roken-is-een-grotere-factor-in-het-krijgen-van-longkanker">
+<h3>Argument: Roken is een grotere factor in het krijgen van longkanker<a class="headerlink" href="#argument-roken-is-een-grotere-factor-in-het-krijgen-van-longkanker" title="Link to this heading">#</a></h3>
+<p>Hoewel er een correlatie bestaat tussen luchtvervuiling en longkanker, is de correlatie tussen roken en longkanker veel erger.</p>
+<blockquote>
+<div><p><em>Figure 4: Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</em></p>
+</div></blockquote>
+</section>
+<section id="argument-luchtvervuiling-neemt-al-af">
+<h3>Argument: Luchtvervuiling neemt al af.<a class="headerlink" href="#argument-luchtvervuiling-neemt-al-af" title="Link to this heading">#</a></h3>
+<p>Luchtvervuiling is al aan het krimpen, snellere vermindering is niet nodig.</p>
+<blockquote>
+<div><p><em>Figure 5: Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</em></p>
+</div></blockquote>
+</section>
+</section>
+<section id="reflection">
+<h2>Reflection<a class="headerlink" href="#reflection" title="Link to this heading">#</a></h2>
+<p>Curabitur non lacus ex. Maecenas at massa ultricies justo venenatis condimentum sed et eros. Ut vitae iaculis massa. Aenean vitae sagittis nibh. Aliquam pharetra dui suscipit purus dictum rutrum. Donec ultricies odio quis porttitor aliquet. Fusce sed nisl non velit rutrum commodo nec sed magna. Morbi non volutpat mi, cursus pulvinar dolor.</p>
+<p>Nam sit amet volutpat sapien. Aenean eu mattis neque. Maecenas eget libero consequat, condimentum nulla luctus, fermentum lectus. Donec at enim sit amet dolor vestibulum faucibus. Vestibulum velit elit, faucibus ut mi sit amet, mollis rutrum eros. Ut ut lacinia ante, eu placerat ligula. Fusce quis convallis purus. Maecenas eget fringilla quam.</p>
+<p>Proin ac sapien et lectus tempor dignissim a at arcu. Donec placerat aliquet odio, vel aliquam nibh tempus vel. Pellentesque non velit iaculis, porta metus sed, dictum augue. Aenean tempus gravida ullamcorper. Proin cursus fringilla turpis. Integer id lectus dignissim, ultrices metus vel, dictum quam. Suspendisse augue ligula, vestibulum ac nulla a, porta pharetra leo. Integer et pharetra lacus, in porttitor mauris. Cras sodales metus sit amet enim rhoncus sodales. Etiam orci enim, tincidunt eget arcu vel, gravida scelerisque lacus.</p>
+</section>
+<section id="work-distribution">
+<h2>Work Distribution<a class="headerlink" href="#work-distribution" title="Link to this heading">#</a></h2>
+<p>Curabitur non lacus ex. Maecenas at massa ultricies justo venenatis condimentum sed et eros. Ut vitae iaculis massa. Aenean vitae sagittis nibh. Aliquam pharetra dui suscipit purus dictum rutrum. Donec ultricies odio quis porttitor aliquet. Fusce sed nisl non velit rutrum commodo nec sed magna. Morbi non volutpat mi, cursus pulvinar dolor.</p>
+<p>Nam sit amet volutpat sapien. Aenean eu mattis neque. Maecenas eget libero consequat, condimentum nulla luctus, fermentum lectus. Donec at enim sit amet dolor vestibulum faucibus. Vestibulum velit elit, faucibus ut mi sit amet, mollis rutrum eros. Ut ut lacinia ante, eu placerat ligula. Fusce quis convallis purus. Maecenas eget fringilla quam.</p>
+<p>Proin ac sapien et lectus tempor dignissim a at arcu. Donec placerat aliquet odio, vel aliquam nibh tempus vel. Pellentesque non velit iaculis, porta metus sed, dictum augue. Aenean tempus gravida ullamcorper. Proin cursus fringilla turpis. Integer id lectus dignissim, ultrices metus vel, dictum quam. Suspendisse augue ligula, vestibulum ac nulla a, porta pharetra leo. Integer et pharetra lacus, in porttitor mauris. Cras sodales metus sit amet enim rhoncus sodales. Etiam orci enim, tincidunt eget arcu vel, gravida scelerisque lacus.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -424,6 +690,34 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-and-preprocessing">Dataset and Preprocessing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perspectief-1-luchtvervuiling-moet-direct-verminderd-worden-voor-de-bescherming-van-de-gezondheid">Perspectief 1: Luchtvervuiling moet direct verminderd worden voor de bescherming van de gezondheid</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-luchtvervuiling-veroorzaakt-longkanker">Argument: Luchtvervuiling veroorzaakt longkanker</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perspectief-2-het-verminderen-van-luchtvervuiling-heeft-geen-prioriteit-omdat-het-geen-grote-impact-heeft-op-de-gezondheid">Perspectief 2: Het verminderen van luchtvervuiling heeft geen prioriteit, omdat het geen grote impact heeft op de gezondheid.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-roken-is-een-grotere-factor-in-het-krijgen-van-longkanker">Argument: Roken is een grotere factor in het krijgen van longkanker</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#argument-luchtvervuiling-neemt-al-af">Argument: Luchtvervuiling neemt al af.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection">Reflection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#work-distribution">Work Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

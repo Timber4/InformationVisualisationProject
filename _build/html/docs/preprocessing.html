@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Preprocessing &#8212; IV Project</title>
+    <title>Data Preprocessing &#8212; IV Project</title>
   
   
   
@@ -173,7 +173,7 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="notebook.html">Test notebook</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Preprocessing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Data Preprocessing</a></li>
 </ul>
 
     </div>
@@ -377,7 +377,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -388,11 +390,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Preprocessing</h1>
+    <h1>Data Preprocessing</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-kanker">Dataset 1: Kanker</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-luchtvervuiling">Dataset 2: Luchtvervuiling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-roken">Dataset 3: Roken</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtreren">Filtreren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combineren">Combineren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opslaan">Opslaan</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -402,25 +417,27 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="preprocessing">
-<h1>Preprocessing<a class="headerlink" href="#preprocessing" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="data-preprocessing">
+<h1>Data Preprocessing<a class="headerlink" href="#data-preprocessing" title="Link to this heading">#</a></h1>
+<p>Studenten: Wietske Boersma, Isa van den Hoven, Alecsandru Kreefft-Libiu, Timber Rijsdorp</p>
+<p>Teamnummer: N5</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="c1">#https://www.kaggle.com/datasets/programmerrdai/cancer?select=cancer-death-rates-by-type.csv</span>
-<span class="n">df_cancer_rate</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;datasets/cancer-death-rates-by-type.csv&#39;</span><span class="p">)</span>
-<span class="c1">#https://ourworldindata.org/explorers/air-pollution?tab=table&amp;uniformYAxis=0&amp;Pollutant=All+pollutants&amp;Sector=From+all+sectors+%28Total%29&amp;Per+capita=false&amp;country=USA~CHN~IND~GBR~OWID_WRL</span>
-<span class="n">df_pollution</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;datasets/air-pollution.csv&#39;</span><span class="p">)</span>
-<span class="c1">#https://ourworldindata.org/grapher/daily-smoking-prevalence-bounds?tab=chart</span>
-<span class="n">df_smoking</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;datasets/smoking.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<section id="dataset-1-kanker">
+<h2>Dataset 1: Kanker<a class="headerlink" href="#dataset-1-kanker" title="Link to this heading">#</a></h2>
+<p>Deze dataset bevat informatie over de hoeveelheid mensen die overlijden aan verschillende soorten kanker. De data laat per kankersoort zien wat de leeftijd gestandaardiseerde hoeveelheid mensen zijn die overleden zijn aan die kankersoort in dat jaar en in dat land. Wij zijn voor ons onderzoek alleen geinteresseerd in de data rondom longkanker omdat die kankersoort voornamelijk wordt benoemd in discussie rondom luchtvervuiling.</p>
+<p>Hieronder kan je zien hoe de data word’t gefilterd. We selecteren alleen de kolommen: landcode, jaar en longkanker overledenen, en we verwijderen datapunten dat niet verbonden is aan een land.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select columns</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># https://www.kaggle.com/datasets/programmerrdai/cancer?select=cancer-death-rates-by-type.csv</span>
+<span class="c1"># Load data</span>
+<span class="n">df_cancer_rate</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;datasets/cancer-death-rates-by-type.csv&#39;</span><span class="p">)</span>
+<span class="c1"># Select columns</span>
 <span class="n">df_cancer_rate</span> <span class="o">=</span> <span class="n">df_cancer_rate</span><span class="p">[[</span><span class="s1">&#39;Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Deaths - Tracheal, bronchus, and lung cancer - Sex: Both - Age: Age-standardized (Rate)&#39;</span><span class="p">]]</span>
 <span class="c1"># Rename columns</span>
 <span class="n">df_cancer_rate</span> <span class="o">=</span> <span class="n">df_cancer_rate</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Deaths - Tracheal, bronchus, and lung cancer - Sex: Both - Age: Age-standardized (Rate)&#39;</span><span class="p">:</span><span class="s1">&#39;TBL rate&#39;</span><span class="p">})</span>
@@ -490,81 +507,16 @@ document.write(`
 </table>
 </div></div></div>
 </div>
+</section>
+<section id="dataset-2-luchtvervuiling">
+<h2>Dataset 2: Luchtvervuiling<a class="headerlink" href="#dataset-2-luchtvervuiling" title="Link to this heading">#</a></h2>
+<p>In deze dataset staat de hoeveelheid vervuiling voor verschillende stoffen dat is gemeten per land per jaar. We zijn geinteresseerd in alle soorten uitstoot voor dit onderzoek, dus de enige variabel dat we eruit filteren is het land omdat de landcode deze informatie al geeft. Verder verwijderen we weer datapunten dat niet verbonden is met een land.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select columns</span>
-<span class="n">df_smoking</span> <span class="o">=</span> <span class="n">df_smoking</span><span class="p">[[</span><span class="s1">&#39;Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Daily smoking prevalence - both (IHME, GHDx (2012))&#39;</span><span class="p">]]</span>
-<span class="c1"># Rename columns</span>
-<span class="n">df_smoking</span> <span class="o">=</span> <span class="n">df_smoking</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Daily smoking prevalence - both (IHME, GHDx (2012))&#39;</span><span class="p">:</span><span class="s1">&#39;Percentage daily smoker&#39;</span><span class="p">})</span>
-<span class="c1"># Delete non-country entries</span>
-<span class="n">df_smoking</span> <span class="o">=</span> <span class="n">df_smoking</span><span class="p">[</span><span class="n">df_smoking</span><span class="p">[</span><span class="s1">&#39;Code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span>
-<span class="c1"># Display dataframe</span>
-<span class="n">df_smoking</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Code</th>
-      <th>Year</th>
-      <th>Percentage daily smoker</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>AFG</td>
-      <td>1980</td>
-      <td>10.4</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>AFG</td>
-      <td>1981</td>
-      <td>10.5</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>AFG</td>
-      <td>1982</td>
-      <td>10.5</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>AFG</td>
-      <td>1983</td>
-      <td>10.5</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>AFG</td>
-      <td>1984</td>
-      <td>10.6</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select columns</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># https://ourworldindata.org/explorers/air-pollution?tab=table&amp;uniformYAxis=0&amp;Pollutant=All+pollutants&amp;Sector=From+all+sectors+%28Total%29&amp;Per+capita=false&amp;country=USA~CHN~IND~GBR~OWID_WRL</span>
+<span class="c1"># Load data</span>
+<span class="n">df_pollution</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;datasets/air-pollution.csv&#39;</span><span class="p">)</span>
+<span class="c1"># Select columns</span>
 <span class="n">df_pollution</span> <span class="o">=</span> <span class="n">df_pollution</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Entity&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="c1"># Delete non-country entries</span>
 <span class="n">df_pollution</span> <span class="o">=</span> <span class="n">df_pollution</span><span class="p">[</span><span class="n">df_pollution</span><span class="p">[</span><span class="s1">&#39;Code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span>
@@ -668,6 +620,89 @@ document.write(`
 </table>
 </div></div></div>
 </div>
+</section>
+<section id="dataset-3-roken">
+<h2>Dataset 3: Roken<a class="headerlink" href="#dataset-3-roken" title="Link to this heading">#</a></h2>
+<p>Voor de laatste dataset hebben we gekeken naar het percentage van de mensen per land dat rookt. Deze dataset bevat ook per land per jaar het percentage dagelijkse rokers over de gehele populatie. We selecteren deze kolommen en verwijderen de niet-landelijke data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># https://ourworldindata.org/grapher/daily-smoking-prevalence-bounds?tab=chart</span>
+<span class="c1"># Load data</span>
+<span class="n">df_smoking</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;datasets/smoking.csv&#39;</span><span class="p">)</span>
+<span class="c1"># Select columns</span>
+<span class="n">df_smoking</span> <span class="o">=</span> <span class="n">df_smoking</span><span class="p">[[</span><span class="s1">&#39;Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Daily smoking prevalence - both (IHME, GHDx (2012))&#39;</span><span class="p">]]</span>
+<span class="c1"># Rename columns</span>
+<span class="n">df_smoking</span> <span class="o">=</span> <span class="n">df_smoking</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Daily smoking prevalence - both (IHME, GHDx (2012))&#39;</span><span class="p">:</span><span class="s1">&#39;Percentage daily smokers&#39;</span><span class="p">})</span>
+<span class="c1"># Delete non-country entries</span>
+<span class="n">df_smoking</span> <span class="o">=</span> <span class="n">df_smoking</span><span class="p">[</span><span class="n">df_smoking</span><span class="p">[</span><span class="s1">&#39;Code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span>
+<span class="c1"># Display dataframe</span>
+<span class="n">df_smoking</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Code</th>
+      <th>Year</th>
+      <th>Percentage daily smokers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AFG</td>
+      <td>1980</td>
+      <td>10.4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AFG</td>
+      <td>1981</td>
+      <td>10.5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AFG</td>
+      <td>1982</td>
+      <td>10.5</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>AFG</td>
+      <td>1983</td>
+      <td>10.5</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AFG</td>
+      <td>1984</td>
+      <td>10.6</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="filtreren">
+<h2>Filtreren<a class="headerlink" href="#filtreren" title="Link to this heading">#</a></h2>
+<p>Alle datasets bevatten jaarlijke data, maar niet alle datasets hebben dezelfde jaartallen. Om te zorgen dat we geen lege data krijgen in jaren dat een dataset niet heeft, filtreren we alle datasets naar alle jaren tussen 1990 en 2012.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select years to collect data from</span>
@@ -680,6 +715,10 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
+<section id="combineren">
+<h2>Combineren<a class="headerlink" href="#combineren" title="Link to this heading">#</a></h2>
+<p>Nu gaan we de datasets samenvoegen. Dit doen we door de datasets te mergen op de landcode en jaar. Verder wordt nog de overige data dat uit landen komt die niet voorkomen in de rest van de datasets verwijdert.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Merge dataframes on country code and year</span>
@@ -687,6 +726,7 @@ document.write(`
 <span class="n">df_combined</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="n">df_pollution_year</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="n">df_combined</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">])</span>
 <span class="c1"># Only select entries that are represented in all datasets</span>
 <span class="n">df_combined</span> <span class="o">=</span> <span class="n">df_combined</span><span class="p">[</span><span class="n">df_combined</span><span class="p">[</span><span class="s1">&#39;TBL rate&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span>
+<span class="n">df_combined</span> <span class="o">=</span> <span class="n">df_combined</span><span class="p">[</span><span class="n">df_combined</span><span class="p">[</span><span class="s1">&#39;Percentage daily smokers&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span>
 
 <span class="c1"># Display data</span>
 <span class="n">df_combined</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -721,7 +761,7 @@ document.write(`
       <th>Non-methane volatile organic compounds (NMVOC) emissions</th>
       <th>Black carbon (BC) emissions</th>
       <th>Ammonia (NH₃) emissions</th>
-      <th>Percentage daily smoker</th>
+      <th>Percentage daily smokers</th>
       <th>TBL rate</th>
     </tr>
   </thead>
@@ -800,6 +840,10 @@ document.write(`
 </table>
 </div></div></div>
 </div>
+</section>
+<section id="opslaan">
+<h2>Opslaan<a class="headerlink" href="#opslaan" title="Link to this heading">#</a></h2>
+<p>En als laatst wordt de gecombineerde dataset opgeslagen zodat het makkelijk toegangbaar is voor het onderzoek.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save to csv</span>
@@ -808,6 +852,7 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -855,6 +900,26 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-kanker">Dataset 1: Kanker</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-luchtvervuiling">Dataset 2: Luchtvervuiling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-roken">Dataset 3: Roken</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtreren">Filtreren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combineren">Combineren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opslaan">Opslaan</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

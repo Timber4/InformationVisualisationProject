@@ -1,0 +1,7 @@
+jupyter-book build --all .
+git status
+git add .
+git status
+git commit -m "Update my book."
+git push
+ghp-import -n -p -f _build/html

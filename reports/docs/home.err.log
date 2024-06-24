@@ -1,0 +1,64 @@
+Traceback (most recent call last):
+  File "C:\Users\timbe\miniconda3\envs\jupyterbook\lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\timbe\miniconda3\envs\jupyterbook\lib\site-packages\nbclient\client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "C:\Users\timbe\miniconda3\envs\jupyterbook\lib\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "C:\Users\timbe\miniconda3\envs\jupyterbook\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "C:\Users\timbe\miniconda3\envs\jupyterbook\lib\site-packages\nbclient\client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\timbe\miniconda3\envs\jupyterbook\lib\site-packages\nbclient\client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\timbe\miniconda3\envs\jupyterbook\lib\site-packages\nbclient\client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import pandas as pd
+import plotly.graph_objs as go
+import plotly.express as px
+
+df = pd.read_csv('datasets/norm.csv')
+df_total_emission = df.copy()
+df_total_emission = df_total_emission[df_total_emission['Code'] != 'LUX']
+df_total_emission['Total emission'] = df_total_emission[['Nitrogen oxide (NOx)', 'Sulphur dioxide (SO₂) emissions', 'Carbon monoxide (CO) emissions',
+                                                       'Organic carbon (OC) emissions', 'Non-methane volatile organic compounds (NMVOC) emissions', 'Black carbon (BC) emissions',
+                                                       'Ammonia (NH₃) emissions']].sum(axis=1)
+
+fig = px.choropleth(
+                    df_total_emission,
+                    locations="Code",
+                    color="Total emission",
+                    range_color=(df_total_emission['Total emission'].min(), df_total_emission['Total emission'].max()), 
+                    animation_frame="Year",
+                    height=600,
+                    color_continuous_scale=plotly.colors.sequential.Jet
+)
+fig.update_layout(title='Totale uitstoot per 1.000 inwoners (ton)',coloraxis_colorbar_title_text = 'Totale uitstoot')
+
+fig.show()
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mNameError[0m                                 Traceback (most recent call last)
+Cell [1;32mIn[7], line 19[0m
+[0;32m      7[0m df_total_emission [38;5;241m=[39m df_total_emission[df_total_emission[[38;5;124m'[39m[38;5;124mCode[39m[38;5;124m'[39m] [38;5;241m!=[39m [38;5;124m'[39m[38;5;124mLUX[39m[38;5;124m'[39m]
+[0;32m      8[0m df_total_emission[[38;5;124m'[39m[38;5;124mTotal emission[39m[38;5;124m'[39m] [38;5;241m=[39m df_total_emission[[[38;5;124m'[39m[38;5;124mNitrogen oxide (NOx)[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mSulphur dioxide (SO₂) emissions[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mCarbon monoxide (CO) emissions[39m[38;5;124m'[39m,
+[0;32m      9[0m                                                        [38;5;124m'[39m[38;5;124mOrganic carbon (OC) emissions[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mNon-methane volatile organic compounds (NMVOC) emissions[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mBlack carbon (BC) emissions[39m[38;5;124m'[39m,
+[0;32m     10[0m                                                        [38;5;124m'[39m[38;5;124mAmmonia (NH₃) emissions[39m[38;5;124m'[39m]][38;5;241m.[39msum(axis[38;5;241m=[39m[38;5;241m1[39m)
+[0;32m     12[0m fig [38;5;241m=[39m px[38;5;241m.[39mchoropleth(
+[0;32m     13[0m                     df_total_emission,
+[0;32m     14[0m                     locations[38;5;241m=[39m[38;5;124m"[39m[38;5;124mCode[39m[38;5;124m"[39m,
+[0;32m     15[0m                     color[38;5;241m=[39m[38;5;124m"[39m[38;5;124mTotal emission[39m[38;5;124m"[39m,
+[0;32m     16[0m                     range_color[38;5;241m=[39m(df_total_emission[[38;5;124m'[39m[38;5;124mTotal emission[39m[38;5;124m'[39m][38;5;241m.[39mmin(), df_total_emission[[38;5;124m'[39m[38;5;124mTotal emission[39m[38;5;124m'[39m][38;5;241m.[39mmax()), 
+[0;32m     17[0m                     animation_frame[38;5;241m=[39m[38;5;124m"[39m[38;5;124mYear[39m[38;5;124m"[39m,
+[0;32m     18[0m                     height[38;5;241m=[39m[38;5;241m600[39m,
+[1;32m---> 19[0m                     color_continuous_scale[38;5;241m=[39m[43mplotly[49m[38;5;241m.[39mcolors[38;5;241m.[39msequential[38;5;241m.[39mJet
+[0;32m     20[0m )
+[0;32m     21[0m fig[38;5;241m.[39mupdate_layout(title[38;5;241m=[39m[38;5;124m'[39m[38;5;124mTotale uitstoot per 1.000 inwoners (ton)[39m[38;5;124m'[39m,coloraxis_colorbar_title_text [38;5;241m=[39m [38;5;124m'[39m[38;5;124mTotale uitstoot[39m[38;5;124m'[39m)
+[0;32m     23[0m fig[38;5;241m.[39mshow()
+
+[1;31mNameError[0m: name 'plotly' is not defined
+

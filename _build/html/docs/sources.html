@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Luchtvervuiling &#8212; Informatie Visualisatie N5</title>
+    <title>Bronvermelding &#8212; Informatie Visualisatie N5</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/home';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/sources';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Perspectieven en argumenten" href="content.html" />
+    <link rel="prev" title="Data Preprocessing" href="preprocessing.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,8 +124,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -142,7 +140,7 @@
 
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="home.html">
   
   
   
@@ -167,17 +165,17 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="home.html">
                     Luchtvervuiling
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="content.html">Perspectieven en argumenten</a></li>
 <li class="toctree-l1"><a class="reference internal" href="outro.html">Reflectie en werkverdeling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="preprocessing.html">Data Preprocessing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sources.html">Bronvermelding</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Bronvermelding</a></li>
 </ul>
 
     </div>
@@ -232,7 +230,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/Timber4/InformationVisualisationProject/blob/main/docs/docs/home.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/Timber4/InformationVisualisationProject/blob/main/docs/docs/sources.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -280,7 +278,7 @@
       
       
       
-      <li><a href="https://github.com/Timber4/InformationVisualisationProject/issues/new?title=Issue%20on%20page%20%2Fdocs/home.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Timber4/InformationVisualisationProject/issues/new?title=Issue%20on%20page%20%2Fdocs/sources.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -310,7 +308,7 @@
       
       
       
-      <li><a href="../_sources/docs/home.ipynb" target="_blank"
+      <li><a href="../_sources/docs/sources.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -381,9 +379,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -394,24 +390,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Luchtvervuiling</h1>
+    <h1>Bronvermelding</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Luchtvervuiling</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">Inleiding</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-and-preprocessing">Dataset and Preprocessing</a></li>
-</ul>
-</li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -421,57 +404,17 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="luchtvervuiling">
-<h1>Luchtvervuiling<a class="headerlink" href="#luchtvervuiling" title="Link to this heading">#</a></h1>
-<p>Studenten: Wietske Boersma, Isa van den Hoven, Alecsandru Kreefft-Libiu, Timber Rijsdorp</p>
-<p>Teamnummer: N5</p>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load image from link</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://media.licdn.com/dms/image/D5612AQH1MTiY7j-UAw/article-cover_image-shrink_600_2000/0/1684297563132?e=2147483647&amp;v=beta&amp;t=5tFYOGCrBbrjSaZTxjmfPHqnuTM3Vs1L5ZiSOQi2zT8&#39;</span>
-
-<span class="c1"># Display image from URL with smaller size and subtitle</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
-
-<span class="c1"># Set the desired image width and height</span>
-<span class="n">width</span> <span class="o">=</span> <span class="mi">900</span>
-<span class="n">height</span> <span class="o">=</span> <span class="mi">300</span>
-
-<span class="c1"># Set the subtitle text</span>
-<span class="n">subtitle</span> <span class="o">=</span> <span class="s2">&quot;© Devic Earth&quot;</span>
-
-<span class="c1"># Create an Image instance with the URL</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">)</span>
-
-<span class="c1"># Display the image and subtitle</span>
-<span class="n">display</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">subtitle</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<div class="output text_html"><img src="https://media.licdn.com/dms/image/D5612AQH1MTiY7j-UAw/article-cover_image-shrink_600_2000/0/1684297563132?e=2147483647&v=beta&t=5tFYOGCrBbrjSaZTxjmfPHqnuTM3Vs1L5ZiSOQi2zT8" width="900" height="300"/></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>© Devic Earth
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="inleiding">
-<h1>Inleiding<a class="headerlink" href="#inleiding" title="Link to this heading">#</a></h1>
-<p>Longkanker is één van de meest voorkomende vormen van kanker. Uit diverse onderzoeken, ook van de WHO (2022), naar de oorzaken van longkanker hebben risicofactoren gevonden, waaronder luchtvervuiling. Steden en industriële gebieden met hoge niveaus van uitstoot van diverse stoffen, zoals stikstofoxide en zwaveldioxide, hebben dus verhoogde risico’s. Deze verontreinigende stoffen kunnen diep doordringen in de longen en chronische ontstekingen veroorzaken, wat kan leiden tot de ontwikkeling van kanker (KWF, z.d.).
-In dit overzicht worden diverse visualisaties gepresenteerd die inzicht bieden in de relatie tussen luchtvervuiling en longkanker. Er wordt vanuit twee perspectieven naar de kwestie gekeken. Het eerste perspectief benadrukt dat luchtvervuiling verminderd moet worden, omdat het een toename van longkankerdiagnoses veroorzaakt. Het tweede perspectief maakt een vergelijking met de impact van roken op de diagnose van longkanker. En hoe de impact van luchtvervuiling mogelijk in het niet valt in vergelijking met de correlatie tussen roken en de diagnose van longkanker. In de visualisaties wordt verwezen naar de TBL-rate, waarmee Tracheaal, Bronchitis en Longkanker worden aangeduid. Deze rate is een gestandaardiseerde hoeveelheid mensen die overleden zijn aan Tracheaal, Bronchiaal of Longkanker in dat jaar en in dat land.</p>
-<section id="dataset-and-preprocessing">
-<h2>Dataset and Preprocessing<a class="headerlink" href="#dataset-and-preprocessing" title="Link to this heading">#</a></h2>
-<p>Voor dit onderzoek hebben we 3 datasets gebruikt. Namelijk een dataset met de hoeveelheid doden voor longkanker, een dataset met de specifieke uitstoten in luchtvervuiling en een dataset met de dagelijkse rokers per land. Voor de dataset met uitstoten hebben we nog een 4e dataset ter ondersteuning gebruikt om te rekenen van totale uitstoot naar uitstoot per capita. De gedetailleerde beschrijving van de datasets en hoe we het hebben gefilterd voor gebruik kan je zien in het hoofdstuk: <a class="reference external" href="https://timber4.github.io/InformationVisualisationProject/docs/preprocessing.html">Data Preprocessing</a>.</p>
-</section>
-<div class="toctree-wrapper compound">
-</div>
+  <section id="bronvermelding">
+<h1>Bronvermelding<a class="headerlink" href="#bronvermelding" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>EenVandaag. (2020, 17 november). Nog meer mensen met longkanker in de omgeving van Tata Steel dan eerder bekend. <a class="reference external" href="https://eenvandaag.avrotros.nl/item/nog-meer-mensen-met-longkanker-in-de-omgeving-van-tata-steel-dan-eerder-bekend/">https://eenvandaag.avrotros.nl/item/nog-meer-mensen-met-longkanker-in-de-omgeving-van-tata-steel-dan-eerder-bekend/</a></p></li>
+<li><p>Greenpeace Nederland. (2024, 21 april). People vs polluters: Tata Steel. Greenpeace Nederland. <a class="reference external" href="https://www.greenpeace.org/nl/acties/tata-steel/">https://www.greenpeace.org/nl/acties/tata-steel/</a></p></li>
+<li><p>CIA. (2017) GDP - composition, by sector of origin. <a class="reference external" href="https://www.cia.gov/the-world-factbook/field/gdp-composition-by-sector-of-origin/">https://www.cia.gov/the-world-factbook/field/gdp-composition-by-sector-of-origin/</a></p></li>
+<li><p>ACCR. (2020, 31 januari). Air Pollution May be Associated With Many Kinds of Cancer. American Association For Cancer Research. <a class="reference external" href="https://www.aacr.org/patients-caregivers/progress-against-cancer/air-pollution-associated-cancer/#:~:text=It%27s%20no%20surprise%20that%20air,%2C%20liver%2C%20and%20pancreatic%20cancer">https://www.aacr.org/patients-caregivers/progress-against-cancer/air-pollution-associated-cancer/#:~:text=It’s no surprise that air,%2C liver%2C and pancreatic cancer</a>.</p></li>
+<li><p>Oorzaken en symptomen van longkanker. (2020). Longkanker Nederland. <a class="reference external" href="https://www.longkankernederland.nl/longkanker/oorzaken-en-symptomen#:~:text=Na%20roken%20is%20radon%20de,%3A%20Wereld%20Gezondheidsorganisatie%2C%20WHO">https://www.longkankernederland.nl/longkanker/oorzaken-en-symptomen#:~:text=Na roken is radon de,%3A Wereld Gezondheidsorganisatie%2C WHO</a>).</p></li>
+<li><p>World Health Organization: WHO. (2022, 19 december). Ambient (outdoor) air pollution. <a class="reference external" href="https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health">https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health</a></p></li>
+<li><p>Kankerbestrijding, K. (z.d.). Luchtvervuiling. KWF. <a class="reference external" href="https://www.kwf.nl/waar-kun-je-kanker-van-krijgen/luchtvervuiling">https://www.kwf.nl/waar-kun-je-kanker-van-krijgen/luchtvervuiling</a></p></li>
+</ul>
 </section>
 
     <script type="text/x-thebe-config">
@@ -504,14 +447,14 @@ In dit overzicht worden diverse visualisaties gepresenteerd die inzicht bieden i
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="content.html"
-       title="next page">
+    <a class="left-prev"
+       href="preprocessing.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Perspectieven en argumenten</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Data Preprocessing</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -519,26 +462,6 @@ In dit overzicht worden diverse visualisaties gepresenteerd die inzicht bieden i
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Luchtvervuiling</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">Inleiding</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-and-preprocessing">Dataset and Preprocessing</a></li>
-</ul>
-</li>
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>

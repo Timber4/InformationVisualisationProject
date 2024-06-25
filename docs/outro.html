@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Reflectie &#8212; IV Project</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/outro';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Data Preprocessing" href="preprocessing.html" />
+    <link rel="prev" title="Perspectief 1: Luchtvervuiling moet direct verminderd worden voor de bescherming van de gezondheid" href="content.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">IV Project</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Luchtvervuiling
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="content.html">Perspectief 1: Luchtvervuiling moet direct verminderd worden voor de bescherming van de gezondheid</a></li>
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Reflectie</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="preprocessing.html">Data Preprocessing</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Timber4/InformationVisualisationProject/blob/main/docs/docs/outro.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Timber4/InformationVisualisationProject" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Timber4/InformationVisualisationProject/issues/new?title=Issue%20on%20page%20%2Fdocs/outro.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/docs/outro.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Reflectie</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Reflectie</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#peer-feedback">Peer feedback</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zelfreflectie">Zelfreflectie</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#werk-verdeling">Werk verdeling</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isa">Isa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wietske">Wietske</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timber">Timber</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alecsandru">Alecsandru</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bronvermelding">Bronvermelding</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="reflectie">
+<h1>Reflectie<a class="headerlink" href="#reflectie" title="Link to this heading">#</a></h1>
+<section id="peer-feedback">
+<h2>Peer feedback<a class="headerlink" href="#peer-feedback" title="Link to this heading">#</a></h2>
+<p>Op 20 juni 2024 is ons groepje N5 samengekomen met een ander groepje en de TA voor peer feedback. Ieder groepje heeft zijn werk van de afgelopen 3 weken gepresenteerd en het andere groepje en de TA hebben feedback gegeven over de punten die er goed uitzagen en de dingen die beter uitgevoerd kunnen worden.</p>
+<p>De algemene complimenten die we hebben ontvangen op onze eerste versie is dat de data die we hadden goed aansloot op de materie die we behandelden en dat het geen nattevingerwerk is geweest, en dat de visualisatie van de data in de grafieken destijds een goed beeld geeft van de perspectieven die zijn behandeld.</p>
+<p>Feedback over hetgeen dat beter kon bedroeg over het algemeen details over hoe de grafieken beter vormgegeven konden worden. Zoals een slider toevoegen aan de grafieken om de dynamiek te zien van de wereldwijde uitstoot, evenals het verwijderen van data dat weinig effect heeft gehad op de uiteindelijke verdeling van variabelen.</p>
+<p>De feedback was voor ons gerechtvaardigd en we zijn ermee aan de slag gegaan. Zo zit er nu een slider bij de wereldkaart waar dat voorheen niet was en hebben we de waarden uit de wereldwijde uitstoot gefilterd omdat de kleinste fracties ervoor zorgden dat onze grafieken niet geordend waren.</p>
+</section>
+<section id="zelfreflectie">
+<h2>Zelfreflectie<a class="headerlink" href="#zelfreflectie" title="Link to this heading">#</a></h2>
+<p>In het onderzoeksvoorstel was de voordehand liggend om te focussen op TBL-kanker, ofwel luchtwegkanker in relatie met luchtvervuiling en roken. Echter hebben we tijdens het onderzoeksvoorstel ook nog andere vormen van kanker bestudeerd zoals borst-, lever- en pancreaskanker die volgens het ACCR (2020) ook relatief veel voorkomend zijn in correlatie met luchtvervuiling. Als we meer tijd hadden gehad voor het onderzoek hadden we de genoemde kankersoorten ook tegenover roken en luchtvervuiling willen zetten in onze uiteindelijke Data Story. Als hier namelijk ook een correlatie gevonden kan worden is het belangrijk om dat verder te onderzoeken, sinds het zou kunnen betekenen dat meer mensen een risico op andere soorten kanker kunnen ondervinden van roken of luchtvervuiling.</p>
+</section>
+</section>
+<section id="werk-verdeling">
+<h1>Werk verdeling<a class="headerlink" href="#werk-verdeling" title="Link to this heading">#</a></h1>
+<p>In de eerste fase van het project bestond N5 uit alleen Wietske, Isa en Alecsandru. Timber heeft zich na het onderzoeksvoorstel gepresenteerd te hebben bij ons gevoegd en bleek een onmisbaar element sinds hij enige ervaring had en de rest ook begeleiding kon bieden buiten de werkgroepen.</p>
+<p>Tijdens het project hebben we elkaar het meest gesproken tijdens de werkgroepen. Dit waren ook onze standaard meeting dagen, omdat we het geleverde werk dat we individueel hadden gedaan konden samenvoegen, en vervolgens met z’n allen naar de werkgroep konden gaan om vragen te stellen over de gang van zaken. Toekomstige afspraken hebben we vooral via Whatsapp gemaakt en hebben ze individueel geïmplementeerd.</p>
+<p>Tijdens onze eerste groepsbijeenkomst hebben we onderwerpen gekozen die we aan elkaar wilden correleren en gezamenlijk bijbehorende datasets gezocht die ons streven benaderen. Hierna zijn de datasets opgeschoond en samengevoegd gebaseerd op jaar (zie Dataset Preprocessing). Daarna zijn we gelijk aan de slag gegaan met het verzinnen van de data story eromheen en bijpassende grafieken te maken die onze perspectieven op een inhoudelijke en correcte wijze zouden weergeven. Dit bracht ons naar de voorlopige versie van de data story die we in de overige tijd hebben aangepast gebaseerd op de feedback en afgemaakt hebben.</p>
+<section id="isa">
+<h2>Isa<a class="headerlink" href="#isa" title="Link to this heading">#</a></h2>
+<p>Isa heeft zich beziggehouden met de vormgeving van grafieken, de data-analyse van de luchtvervuiling en het in context brengen van de verschillende perspectieven samen met Wietske.</p>
+</section>
+<section id="wietske">
+<h2>Wietske<a class="headerlink" href="#wietske" title="Link to this heading">#</a></h2>
+<p>Wietske is verantwoordelijk voor de vormgeving van de grafieken, het schrijven van de inleiding, en het in context brengen van de context van de verschillende perspectieven samen met Isa. Ze heeft ook data uit 2012 samengevoegd, het laatste jaar waar alle datasets overeenkomen.</p>
+</section>
+<section id="timber">
+<h2>Timber<a class="headerlink" href="#timber" title="Link to this heading">#</a></h2>
+<p>Timber is verantwoordelijk voor vormgeving van grafieken en de meeste data preprocessing, zowel het cleanen als het samenvoegen van de datasets die we hebben gekozen. Hij heeft de Github repository gemanaged en ervoor gezorgd dat de layout op de website begrijpelijk en geordend is.</p>
+</section>
+<section id="alecsandru">
+<h2>Alecsandru<a class="headerlink" href="#alecsandru" title="Link to this heading">#</a></h2>
+<p>Alecsandru heeft zich beziggehouden met het vormgeven van de grafieken, het schrijven van de reflectie en de werkverdeling en de teksten bij de data story die context geven aan grafieken.</p>
+</section>
+</section>
+<section id="bronvermelding">
+<h1>Bronvermelding<a class="headerlink" href="#bronvermelding" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>EenVandaag. (2020, 17 november). Nog meer mensen met longkanker in de omgeving van Tata Steel dan eerder bekend. <a class="reference external" href="https://eenvandaag.avrotros.nl/item/nog-meer-mensen-met-longkanker-in-de-omgeving-van-tata-steel-dan-eerder-bekend/">https://eenvandaag.avrotros.nl/item/nog-meer-mensen-met-longkanker-in-de-omgeving-van-tata-steel-dan-eerder-bekend/</a></p></li>
+<li><p>Greenpeace Nederland. (2024, 21 april). People vs polluters: Tata Steel. Greenpeace Nederland. <a class="reference external" href="https://www.greenpeace.org/nl/acties/tata-steel/">https://www.greenpeace.org/nl/acties/tata-steel/</a></p></li>
+<li><p>CIA. (2017) GDP - composition, by sector of origin. <a class="reference external" href="https://www.cia.gov/the-world-factbook/field/gdp-composition-by-sector-of-origin/">https://www.cia.gov/the-world-factbook/field/gdp-composition-by-sector-of-origin/</a></p></li>
+<li><p>ACCR. (2020, 31 januari). Air Pollution May be Associated With Many Kinds of Cancer. American Association For Cancer Research. <a class="reference external" href="https://www.aacr.org/patients-caregivers/progress-against-cancer/air-pollution-associated-cancer/#:~:text=It%27s%20no%20surprise%20that%20air,%2C%20liver%2C%20and%20pancreatic%20cancer">https://www.aacr.org/patients-caregivers/progress-against-cancer/air-pollution-associated-cancer/#:~:text=It’s no surprise that air,%2C liver%2C and pancreatic cancer</a>.</p></li>
+<li><p>Oorzaken en symptomen van longkanker. (2020). Longkanker Nederland. <a class="reference external" href="https://www.longkankernederland.nl/longkanker/oorzaken-en-symptomen#:~:text=Na%20roken%20is%20radon%20de,%3A%20Wereld%20Gezondheidsorganisatie%2C%20WHO">https://www.longkankernederland.nl/longkanker/oorzaken-en-symptomen#:~:text=Na roken is radon de,%3A Wereld Gezondheidsorganisatie%2C WHO</a>).</p></li>
+<li><p>World Health Organization: WHO. (2022, 19 december). Ambient (outdoor) air pollution. <a class="reference external" href="https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health">https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health</a></p></li>
+<li><p>Kankerbestrijding, K. (z.d.). Luchtvervuiling. KWF. <a class="reference external" href="https://www.kwf.nl/waar-kun-je-kanker-van-krijgen/luchtvervuiling">https://www.kwf.nl/waar-kun-je-kanker-van-krijgen/luchtvervuiling</a></p></li>
+</ul>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="content.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Perspectief 1: Luchtvervuiling moet direct verminderd worden voor de bescherming van de gezondheid</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="preprocessing.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Data Preprocessing</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Reflectie</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#peer-feedback">Peer feedback</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zelfreflectie">Zelfreflectie</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#werk-verdeling">Werk verdeling</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isa">Isa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wietske">Wietske</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timber">Timber</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alecsandru">Alecsandru</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bronvermelding">Bronvermelding</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By N5
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

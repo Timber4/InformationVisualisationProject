@@ -6,6 +6,7 @@ root: docs/home
 chapters:
 - file: docs/preprocessing
 - file: docs/content
-- file: docs/outro
+- file: docs/reflection
+- file: docs/work_distribution
 - file: docs/sources
 

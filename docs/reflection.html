@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Luchtvervuiling &#8212; Informatie Visualisatie N5</title>
+    <title>Reflectie en werkverdeling &#8212; Informatie Visualisatie N5</title>
   
   
   
@@ -57,11 +57,10 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/home';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/reflection';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Data Preprocessing" href="preprocessing.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -142,7 +141,7 @@
 
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="home.html">
   
   
   
@@ -167,8 +166,8 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="home.html">
                     Luchtvervuiling
                 </a>
             </li>
@@ -231,7 +230,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/Timber4/InformationVisualisationProject/blob/main/docs/docs/home.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/Timber4/InformationVisualisationProject/blob/main/docs/docs/reflection.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -279,7 +278,7 @@
       
       
       
-      <li><a href="https://github.com/Timber4/InformationVisualisationProject/issues/new?title=Issue%20on%20page%20%2Fdocs/home.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Timber4/InformationVisualisationProject/issues/new?title=Issue%20on%20page%20%2Fdocs/reflection.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -309,7 +308,7 @@
       
       
       
-      <li><a href="../_sources/docs/home.ipynb" target="_blank"
+      <li><a href="../_sources/docs/reflection.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -393,7 +392,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Luchtvervuiling</h1>
+    <h1>Reflectie en werkverdeling</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -403,13 +402,19 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Luchtvervuiling</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">Inleiding</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-and-preprocessing">Dataset and Preprocessing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflectie">Reflectie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peer-feedback">Peer feedback</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zelfreflectie">Zelfreflectie</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#werk-verdeling">Werk verdeling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#isa">Isa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wietske">Wietske</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timber">Timber</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alecsandru">Alecsandru</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -420,57 +425,44 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="luchtvervuiling">
-<h1>Luchtvervuiling<a class="headerlink" href="#luchtvervuiling" title="Link to this heading">#</a></h1>
-<p>Studenten: Wietske Boersma, Isa van den Hoven, Alecsandru Kreefft-Libiu, Timber Rijsdorp</p>
-<p>Teamnummer: N5</p>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load image from link</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://media.licdn.com/dms/image/D5612AQH1MTiY7j-UAw/article-cover_image-shrink_600_2000/0/1684297563132?e=2147483647&amp;v=beta&amp;t=5tFYOGCrBbrjSaZTxjmfPHqnuTM3Vs1L5ZiSOQi2zT8&#39;</span>
-
-<span class="c1"># Display image from URL with smaller size and subtitle</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
-
-<span class="c1"># Set the desired image width and height</span>
-<span class="n">width</span> <span class="o">=</span> <span class="mi">900</span>
-<span class="n">height</span> <span class="o">=</span> <span class="mi">300</span>
-
-<span class="c1"># Set the subtitle text</span>
-<span class="n">subtitle</span> <span class="o">=</span> <span class="s2">&quot;© Devic Earth&quot;</span>
-
-<span class="c1"># Create an Image instance with the URL</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">)</span>
-
-<span class="c1"># Display the image and subtitle</span>
-<span class="n">display</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">subtitle</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<div class="output text_html"><img src="https://media.licdn.com/dms/image/D5612AQH1MTiY7j-UAw/article-cover_image-shrink_600_2000/0/1684297563132?e=2147483647&v=beta&t=5tFYOGCrBbrjSaZTxjmfPHqnuTM3Vs1L5ZiSOQi2zT8" width="900" height="300"/></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>© Devic Earth
-</pre></div>
-</div>
-</div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="reflectie-en-werkverdeling">
+<h1>Reflectie en werkverdeling<a class="headerlink" href="#reflectie-en-werkverdeling" title="Link to this heading">#</a></h1>
+<section id="reflectie">
+<h2>Reflectie<a class="headerlink" href="#reflectie" title="Link to this heading">#</a></h2>
+<section id="peer-feedback">
+<h3>Peer feedback<a class="headerlink" href="#peer-feedback" title="Link to this heading">#</a></h3>
+<p>Op 20 juni 2024 is ons groepje N5 samengekomen met een ander groepje en de TA voor peer feedback. Ieder groepje heeft zijn werk van de afgelopen 3 weken gepresenteerd en het andere groepje en de TA hebben feedback gegeven over de punten die er goed uitzagen en de dingen die beter uitgevoerd kunnen worden.</p>
+<p>De algemene complimenten die we hebben ontvangen op onze eerste versie is dat de data die we hadden goed aansloot op de materie die we behandelden en dat het geen nattevingerwerk is geweest, en dat de visualisatie van de data in de grafieken destijds een goed beeld geeft van de perspectieven die zijn behandeld.</p>
+<p>Feedback over hetgeen dat beter kon bedroeg over het algemeen details over hoe de grafieken beter vormgegeven konden worden. Zoals een slider toevoegen aan de grafieken om de dynamiek te zien van de wereldwijde uitstoot, evenals het verwijderen van data dat weinig effect heeft gehad op de uiteindelijke verdeling van variabelen.</p>
+<p>De feedback was voor ons gerechtvaardigd en we zijn ermee aan de slag gegaan. Zo zit er nu een slider bij de wereldkaart waar dat voorheen niet was en hebben we de waarden uit de wereldwijde uitstoot gefilterd omdat de kleinste fracties ervoor zorgden dat onze grafieken niet geordend waren.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="inleiding">
-<h1>Inleiding<a class="headerlink" href="#inleiding" title="Link to this heading">#</a></h1>
-<p>Longkanker is één van de meest voorkomende vormen van kanker. Uit diverse onderzoeken, ook van de WHO (2022), naar de oorzaken van longkanker hebben risicofactoren gevonden, waaronder luchtvervuiling. Steden en industriële gebieden met hoge niveaus van uitstoot van diverse stoffen, zoals stikstofoxide en zwaveldioxide, hebben dus verhoogde risico’s. Deze verontreinigende stoffen kunnen diep doordringen in de longen en chronische ontstekingen veroorzaken, wat kan leiden tot de ontwikkeling van kanker (KWF, z.d.).
-In dit overzicht worden diverse visualisaties gepresenteerd die inzicht bieden in de relatie tussen luchtvervuiling en longkanker. Er wordt vanuit twee perspectieven naar de kwestie gekeken. Het eerste perspectief benadrukt dat luchtvervuiling verminderd moet worden, omdat het een toename van longkankerdiagnoses veroorzaakt. Het tweede perspectief maakt een vergelijking met de impact van roken op de diagnose van longkanker. En hoe de impact van luchtvervuiling mogelijk in het niet valt in vergelijking met de correlatie tussen roken en de diagnose van longkanker. In de visualisaties wordt verwezen naar de TBL-rate, waarmee Tracheaal, Bronchitis en Longkanker worden aangeduid. Deze rate is een gestandaardiseerde hoeveelheid mensen die overleden zijn aan Tracheaal, Bronchiaal of Longkanker in dat jaar en in dat land.</p>
-<section id="dataset-and-preprocessing">
-<h2>Dataset and Preprocessing<a class="headerlink" href="#dataset-and-preprocessing" title="Link to this heading">#</a></h2>
-<p>Voor dit onderzoek hebben we 3 datasets gebruikt. Namelijk een dataset met de hoeveelheid doden voor longkanker, een dataset met de specifieke uitstoten in luchtvervuiling en een dataset met de dagelijkse rokers per land. Voor de dataset met uitstoten hebben we nog een 4e dataset ter ondersteuning gebruikt om te rekenen van totale uitstoot naar uitstoot per capita. De gedetailleerde beschrijving van de datasets en hoe we het hebben gefilterd voor gebruik kan je zien in het hoofdstuk: <a class="reference external" href="https://timber4.github.io/InformationVisualisationProject/docs/preprocessing.html">Data Preprocessing</a>.</p>
+<section id="zelfreflectie">
+<h3>Zelfreflectie<a class="headerlink" href="#zelfreflectie" title="Link to this heading">#</a></h3>
+<p>In het onderzoeksvoorstel was de voordehand liggend om te focussen op TBL-kanker, ofwel luchtwegkanker in relatie met luchtvervuiling en roken. Echter hebben we tijdens het onderzoeksvoorstel ook nog andere vormen van kanker bestudeerd zoals borst-, lever- en pancreaskanker die volgens het ACCR (2020) ook relatief veel voorkomend zijn in correlatie met luchtvervuiling. Als we meer tijd hadden gehad voor het onderzoek hadden we de genoemde kankersoorten ook tegenover roken en luchtvervuiling willen zetten in onze uiteindelijke Data Story. Als hier namelijk ook een correlatie gevonden kan worden is het belangrijk om dat verder te onderzoeken, sinds het zou kunnen betekenen dat meer mensen een risico op andere soorten kanker kunnen ondervinden van roken of luchtvervuiling.</p>
 </section>
-<div class="toctree-wrapper compound">
-</div>
+</section>
+<section id="werk-verdeling">
+<h2>Werk verdeling<a class="headerlink" href="#werk-verdeling" title="Link to this heading">#</a></h2>
+<p>In de eerste fase van het project bestond N5 uit alleen Wietske, Isa en Alecsandru. Timber heeft zich na het onderzoeksvoorstel gepresenteerd te hebben bij ons gevoegd en bleek een onmisbaar element sinds hij enige ervaring had en de rest ook begeleiding kon bieden buiten de werkgroepen.</p>
+<p>Tijdens het project hebben we elkaar het meest gesproken tijdens de werkgroepen. Dit waren ook onze standaard meeting dagen, omdat we het geleverde werk dat we individueel hadden gedaan konden samenvoegen, en vervolgens met z’n allen naar de werkgroep konden gaan om vragen te stellen over de gang van zaken. Toekomstige afspraken hebben we vooral via Whatsapp gemaakt en hebben ze individueel geïmplementeerd.</p>
+<p>Tijdens onze eerste groepsbijeenkomst hebben we onderwerpen gekozen die we aan elkaar wilden correleren en gezamenlijk bijbehorende datasets gezocht die ons streven benaderen. Hierna zijn de datasets opgeschoond en samengevoegd gebaseerd op jaar (zie Dataset Preprocessing). Daarna zijn we gelijk aan de slag gegaan met het verzinnen van de data story eromheen en bijpassende grafieken te maken die onze perspectieven op een inhoudelijke en correcte wijze zouden weergeven. Dit bracht ons naar de voorlopige versie van de data story die we in de overige tijd hebben aangepast gebaseerd op de feedback en afgemaakt hebben.</p>
+<section id="isa">
+<h3>Isa<a class="headerlink" href="#isa" title="Link to this heading">#</a></h3>
+<p>Isa heeft zich beziggehouden met de vormgeving van grafieken, de data-analyse van de luchtvervuiling en het in context brengen van de verschillende perspectieven samen met Wietske.</p>
+</section>
+<section id="wietske">
+<h3>Wietske<a class="headerlink" href="#wietske" title="Link to this heading">#</a></h3>
+<p>Wietske is verantwoordelijk voor de vormgeving van de grafieken, het schrijven van de inleiding, en het in context brengen van de context van de verschillende perspectieven samen met Isa. Ze heeft ook data uit 2012 samengevoegd, het laatste jaar waar alle datasets overeenkomen.</p>
+</section>
+<section id="timber">
+<h3>Timber<a class="headerlink" href="#timber" title="Link to this heading">#</a></h3>
+<p>Timber is verantwoordelijk voor vormgeving van grafieken en de meeste data preprocessing, zowel het cleanen als het samenvoegen van de datasets die we hebben gekozen. Hij heeft de Github repository gemanaged en ervoor gezorgd dat de layout op de website begrijpelijk en geordend is.</p>
+</section>
+<section id="alecsandru">
+<h3>Alecsandru<a class="headerlink" href="#alecsandru" title="Link to this heading">#</a></h3>
+<p>Alecsandru heeft zich beziggehouden met het vormgeven van de grafieken, het schrijven van de reflectie en de werkverdeling en de teksten bij de data story die context geven aan grafieken.</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -503,15 +495,6 @@ In dit overzicht worden diverse visualisaties gepresenteerd die inzicht bieden i
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="preprocessing.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Data Preprocessing</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -528,13 +511,19 @@ In dit overzicht worden diverse visualisaties gepresenteerd die inzicht bieden i
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Luchtvervuiling</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#inleiding">Inleiding</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-and-preprocessing">Dataset and Preprocessing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflectie">Reflectie</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peer-feedback">Peer feedback</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zelfreflectie">Zelfreflectie</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#werk-verdeling">Werk verdeling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#isa">Isa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wietske">Wietske</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timber">Timber</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alecsandru">Alecsandru</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>

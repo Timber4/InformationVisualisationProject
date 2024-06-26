@@ -4,8 +4,8 @@
 format: jb-book
 root: docs/home
 chapters:
+- file: docs/preprocessing
 - file: docs/content
 - file: docs/outro
-- file: docs/preprocessing
 - file: docs/sources
 

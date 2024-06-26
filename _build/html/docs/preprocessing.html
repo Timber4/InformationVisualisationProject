@@ -407,8 +407,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-kanker">Dataset 1: Kanker</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-luchtvervuiling">Dataset 2: Luchtvervuiling</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-roken">Dataset 3: Roken</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-4-world-statistieken">Dataset 4: World statistieken</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtreren">Filtreren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-4-wereld-statistieken">Dataset 4: Wereld statistieken</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filteren">Filteren</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combineren">Combineren</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#per-duizend-inwoners">Per duizend inwoners</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opslaan">Opslaan</a></li>
@@ -437,6 +437,7 @@ document.write(`
 </div>
 <section id="dataset-1-kanker">
 <h2>Dataset 1: Kanker<a class="headerlink" href="#dataset-1-kanker" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://www.kaggle.com/datasets/programmerrdai/cancer?select=cancer-death-rates-by-type.csv">Link naar dataset</a></p>
 <p>Deze dataset bevat informatie over de hoeveelheid mensen die overlijden aan verschillende soorten kanker. De data laat per kankersoort zien wat de leeftijd gestandaardiseerde hoeveelheid mensen zijn die overleden zijn aan die kankersoort in dat jaar en in dat land. Wij zijn voor ons onderzoek alleen geinteresseerd in de data rondom longkanker omdat die kankersoort voornamelijk wordt benoemd in discussie rondom luchtvervuiling.</p>
 <p>Hieronder kan je zien hoe de data word’t gefilterd. We selecteren alleen de kolommen: landcode, jaar en longkanker overledenen, en we verwijderen datapunten dat niet verbonden is aan een land.</p>
 <div class="cell docutils container">
@@ -517,6 +518,7 @@ document.write(`
 </section>
 <section id="dataset-2-luchtvervuiling">
 <h2>Dataset 2: Luchtvervuiling<a class="headerlink" href="#dataset-2-luchtvervuiling" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://ourworldindata.org/explorers/air-pollution?tab=table&amp;amp;uniformYAxis=0&amp;amp;Pollutant=All+pollutants&amp;amp;Sector=From+all+sectors+%28Total%29&amp;amp;Per+capita=false&amp;amp;country=USA~CHN~IND~GBR~OWID_WRL">Link naar dataset</a></p>
 <p>In deze dataset staat de hoeveelheid vervuiling voor verschillende stoffen dat is gemeten per land per jaar. We zijn geinteresseerd in alle soorten uitstoot voor dit onderzoek, dus de enige variabel dat we eruit filteren is het land omdat de landcode deze informatie al geeft. Verder verwijderen we weer datapunten dat niet verbonden is met een land.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -630,6 +632,7 @@ document.write(`
 </section>
 <section id="dataset-3-roken">
 <h2>Dataset 3: Roken<a class="headerlink" href="#dataset-3-roken" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://ourworldindata.org/grapher/daily-smoking-prevalence-bounds?tab=chart">Link naar dataset</a></p>
 <p>Voor de laatste dataset hebben we gekeken naar het percentage van de mensen per land dat rookt. Deze dataset bevat ook per land per jaar het percentage dagelijkse rokers over de gehele populatie. We selecteren deze kolommen en verwijderen de niet-landelijke data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -707,8 +710,9 @@ document.write(`
 </div></div></div>
 </div>
 </section>
-<section id="dataset-4-world-statistieken">
-<h2>Dataset 4: World statistieken<a class="headerlink" href="#dataset-4-world-statistieken" title="Link to this heading">#</a></h2>
+<section id="dataset-4-wereld-statistieken">
+<h2>Dataset 4: Wereld statistieken<a class="headerlink" href="#dataset-4-wereld-statistieken" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://www.kaggle.com/datasets/mutindafestus/world-statistics-dataset-from-world-bank">Link naar dataset</a></p>
 <p>We gebruiken deze dataset om de uitstoot gegevens naar een getal te berekenen die makkelijker te visualiseren zijn. De dataset bevat allerlei statistieken van elk land, maar wij gebruiken alleen de populatie variabel.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -786,8 +790,8 @@ document.write(`
 </div></div></div>
 </div>
 </section>
-<section id="filtreren">
-<h2>Filtreren<a class="headerlink" href="#filtreren" title="Link to this heading">#</a></h2>
+<section id="filteren">
+<h2>Filteren<a class="headerlink" href="#filteren" title="Link to this heading">#</a></h2>
 <p>Alle datasets bevatten jaarlijke data, maar niet alle datasets hebben dezelfde jaartallen. Om te zorgen dat we geen lege data krijgen in jaren dat een dataset niet heeft, filtreren we alle datasets naar alle jaren tussen 1990 en 2012.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1147,8 +1151,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-kanker">Dataset 1: Kanker</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-luchtvervuiling">Dataset 2: Luchtvervuiling</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-3-roken">Dataset 3: Roken</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-4-world-statistieken">Dataset 4: World statistieken</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtreren">Filtreren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-4-wereld-statistieken">Dataset 4: Wereld statistieken</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filteren">Filteren</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combineren">Combineren</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#per-duizend-inwoners">Per duizend inwoners</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opslaan">Opslaan</a></li>
